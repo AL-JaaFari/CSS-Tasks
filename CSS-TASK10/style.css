@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .divcls {
+    width: 220px;
+    height: 80px;
+    border: 2px solid rgb(221, 13, 13);
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 2s;
+  }
+  
+  .divcls::before, .divcls::after {
+    content: '';
+    position: absolute;
+    background: #eee;
+    z-index: -1;
+    transition: 2s;
+  }
+  
+  .divcls::before {
+    height: 80px;
+    width: 195px;
+  }
+  
+  .divcls::after {
+    width: 220px;
+    height: 50px;
+  }
+  
+  .divcls:hover::before {
+    width: 0px;
+    background: #fff;
+  }
+  
+  .divcls:hover::after {
+    height: 0px;
+    background: #fff;
+  }
+  
+  .divcls:hover {
+    background: #fff;
+  }
